@@ -1,0 +1,44 @@
+.btn-filled, .btn-regular, .btn-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 1.5px solid #000;
+  gap: 10px;
+  width: fit-content;
+  font-weight: 400;
+}
+
+.btn-hero {
+  border-color: #fff;
+}
+
+.btn-filled {
+  background-color: #fff;
+}
+
+.layout {
+  width: 100%;
+  padding: 0 2rem;
+}
+
+@media (min-width: 1020px) {
+  .layout {
+    width: 80%;
+    padding: 0;
+  }
+}
+@media (min-width: 1020px) {
+  .layout {
+    width: 80%;
+    padding: 0;
+  }
+}
+.hero {
+  position: relative;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

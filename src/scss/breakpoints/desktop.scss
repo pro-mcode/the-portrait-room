@@ -1,0 +1,15 @@
+@use "../utilities/variables" as v;
+
+@media (min-width: 1020px) {
+  .layout {
+    width: 85%;
+    padding: 0;
+  }
+  // .gallery-items {
+  //   display: grid;
+  //   grid-gap: v.$gap-3;
+  //   margin: v.$space-2 0;
+  //   grid-template-columns: repeat(6, 1fr);
+  //   grid-template-rows: repeat(4, 130px);
+  // }
+}

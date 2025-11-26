@@ -1,0 +1,8 @@
+@media (max-width: 400px) {
+  .showcase-items {
+    grid-template-rows: repeat(3, 180px);
+  }
+  .gallery-items {
+    grid-template-rows: repeat(5, 180px);
+  }
+}

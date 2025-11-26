@@ -1,0 +1,34 @@
+@use "../utilities/variables" as v;
+
+%btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: v.$gap-1;
+  color: v.$primary-color;
+  padding: v.$space-1 v.$space-2;
+  border: 1.5px solid v.$secondary-color;
+  gap: v.$gap-3;
+  width: fit-content;
+  font-weight: 400;
+}
+
+.btn-hero {
+  @extend %btn;
+  border-color: v.$primary-color;
+}
+
+.btn-regular {
+  @extend %btn;
+  color: black;
+}
+
+.btn-filled {
+  @extend %btn;
+  background-color: v.$primary-color;
+}
+.btn-package {
+  @extend %btn;
+  padding: v.$space-1 v.$space-1;
+  color: black;
+}

@@ -1,0 +1,7 @@
+@use "../utilities/variables" as v;
+
+.layout {
+  width: 100%;
+  padding: 0 v.$space-1;
+}
+@import "../breakpoints/desktop";

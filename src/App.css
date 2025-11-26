@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@theme {
+  --breakpoint-md: 830px;
+  --color-primary: hsl(0, 0%, 100%);
+  --color-primary-200: hsl(250, 6%, 84%);
+  --color-primary-300: hsl(240, 6%, 70%);
+  --color-primary-600: hsl(243, 23%, 30%);
+  --color-primary-700: hsl(243, 23%, 24%);
+  --color-primary-800: hsl(243, 27%, 20%);
+  --color-primary-900: hsl(243, 96%, 9%);
+  --color-main-500: hsl(233, 67%, 56%);
+  --color-main-700: hsl(248, 70%, 36%);
+  --color-regular-500: hsl(28, 100%, 52%);
+}
+.hero-bg {
+  width: 100vw;
+  height: 40rem;
+  background-image: url("/assets/images/AD-Mphgmain.jpg");
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.floatY {
+  animation: floatY 4s ease-in-out infinite;
+}
