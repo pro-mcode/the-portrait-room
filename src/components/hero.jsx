@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 export default function Hero() {
   const navigate = useNavigate();
   return (
-    <div className="hero relative flex flex-col justify-center items-center h-[75vh] md:h-screen 2xl:max-h-320">
+    <div className="hero relative flex flex-col justify-end items-center h-[60vh] md:justify-center md:min-h-[80vh] lg:min-h-screen 2xl:max-h-320">
       <div className="absolute top-8 w-full mx-auto text-primary z-10">
         <Navbar />
       </div>
@@ -14,10 +14,10 @@ export default function Hero() {
         className="hero-img absolute inset-0 w-full h-full"
       />
 
-      <div className="layout hero-content absolute space-y-6  md:ml-0">
+      <div className="layout hero-content absolute space-y-6 mb-12 max-w-[95%] md:max-w-[90%] lg:max-w-full md:mb-0">
         <p className="text-2xl font-medium">Shutter</p>
         <img src="/assets/images/AD-Mphgline.webp" alt="" />
-        <h1 className="text-4xl font-bold sm:text-5xl md:text-7xl mb-12">
+        <h1 className="text-3xl font-bold mb-6 md:text-5xl lg:text-6xl md:mb-12">
           Living stories
           <br />
           in every shot.

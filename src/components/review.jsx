@@ -10,9 +10,13 @@ export default function Review() {
           professionalism, and dedication to capturing life's most important
           moments beautifully and timelessly.
         </p>
-        <div className="review-container w-full max-w-92 mx-auto space-y-8 flex flex-col justify-center items-center gap-x-12 my-10 md:flex-row md:min-w-full md:space-y-0">
+        <div className="review-container w-full max-w-160 mx-auto space-y-8 flex flex-col justify-center md:items-center gap-x-12 my-10 md:flex-row md:min-w-full md:space-y-0">
           <div className="review-image">
-            <img src="assets/images/AD-Mphg15.jpg" alt="Client photo" />
+            <img
+              src="assets/images/AD-Mphg15.jpg"
+              alt="Client photo"
+              className="max-h-140 w-full md:max-h-full md:w-auto"
+            />
           </div>
           <div className="review-content">
             <h2 className="review-logo text-3xl font-extrabold mb-6">Forbes</h2>

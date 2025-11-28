@@ -2,7 +2,7 @@ import { packagesCard } from "./packages-card";
 
 export default function Packages() {
   return (
-    <div className="packages bg-gray-100 py-12 md:py-24">
+    <div id="pricing" className="packages bg-gray-100 py-12 md:py-24">
       <div className="layout mx-auto">
         <h2 className="section-title text-3xl sm:text-4xl md:text-5xl text-center font-medium tracking-wide">
           Our packages
@@ -11,11 +11,11 @@ export default function Packages() {
         <p className="section-intro w-full text-sm text-center tracking-wider leading-6 font-medium pt-2 sm:text-base md:py-4 md:text-lg">
           Choose the perfect plan that suits your needs and budget.
         </p>
-        <div className="package-container font-inter flex flex-col space-y-4 md:space-y-0 md:flex-row justify-center items-cente gap-x-4 w-full max-w-5xl mx-auto mt-8 ">
+        <div className="package-container font-inter flex flex-col space-y-4 md:space-y-0 md:flex-row justify-center gap-4 w-full lg:max-w-260 mx-auto mt-8">
           {packagesCard.map((card, index) => (
             <div
               key={index}
-              className={`package-card text-center w-full max-w-76 mx-auto md:w-1/3 py-22 px-12  ${
+              className={`package-card text-center w-full max-w-100 mx-auto  py-22 px-12 md:max-w-full ${
                 index === 1
                   ? "bg-black/85 text-primary border-none"
                   : "bg-primary border border-black"

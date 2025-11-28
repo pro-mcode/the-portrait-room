@@ -5,8 +5,8 @@ export default function Service() {
   const [activeIndex, setActiveIndex] = useState(0); // first item open by default
 
   return (
-    <section id="service" className="service py-12">
-      <div className="layout mx-auto">
+    <section id="services" className="service py-12">
+      <div className="layout mx-auto sm:max-w-[90%] lg:max-w-260">
         <h2 className="section-title text-3xl sm:text-4xl md:text-5xl text-center font-medium tracking-wide">
           Services we offer
         </h2>
@@ -18,7 +18,7 @@ export default function Service() {
         </p>
 
         {/* === TWO COLUMN LAYOUT === */}
-        <div className="max-w-120 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-start md:min-w-full">
+        <div className="max-w-150 mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-start md:min-w-full">
           {/* LEFT SIDE – LIST */}
           <div className="space-y-6">
             {serviceContents.map((service, index) => {
@@ -69,7 +69,7 @@ export default function Service() {
                           <img
                             src={serviceContents[activeIndex].img}
                             alt={serviceContents[activeIndex].title}
-                            className="w-full h-auto max-h-70 shadow-md md:hidden mt-4"
+                            className="w-full h-auto max-h-120 shadow-md md:hidden mt-4"
                           />
                         </>
                       )}

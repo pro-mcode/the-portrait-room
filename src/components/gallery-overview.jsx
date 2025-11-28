@@ -2,19 +2,19 @@ import { gallery } from "./gallery";
 export default function GalleryOverview() {
   return (
     <div className="about about-section-preview">
-      <div className="relative w-full h-84 flex flex-col justify-end items-start md:h-102">
+      <div className="relative w-full h-64 flex flex-col justify-end items-start md:h-84 lg:102">
         <img
           src="/assets/images/gallery.webp"
           alt=""
           className="absolute shadow-md h-full w-full"
         />
-        <div className="absolute left-4 flex flex-col justify-center items-center md:left-[7.5%]">
-          <h1 className=" text-5xl text-primary text-left font-bold w-70 mb-8 md:w-xs md:text-6xl">
+        <div className="absolute left-4 flex flex-col justify-center items-center lg:left-[7.5%]">
+          <h1 className=" text-4xl text-primary text-left font-bold w-50 mb-8 sm:text-5xl sm:w-xs md:text-6xl">
             Every Face, A Story.
           </h1>
         </div>
       </div>
-      <div className="layout mx-auto mt-16">
+      <div className="layout mx-auto mt-12 md:mt-18">
         <div className="gallery-items">
           {gallery.map((item, index) => (
             <div
@@ -29,7 +29,7 @@ export default function GalleryOverview() {
             </div>
           ))}
         </div>
-        <button className="btn-regular mx-auto">Load more</button>
+        <button className="btn-regular mx-auto md:mt-4">Load more</button>
       </div>
     </div>
   );

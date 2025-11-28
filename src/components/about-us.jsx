@@ -3,28 +3,28 @@ import { serviceAward } from "./service-award";
 export default function AboutUS() {
   return (
     <div className="about about-section-preview">
-      <div className="relative w-full h-84 flex flex-col justify-end items-start md:h-102">
+      <div className="relative w-full h-64 flex flex-col justify-end items-start md:h-84 lg:102">
         <img
           src="/assets/images/about.webp"
           alt=""
           className="absolute shadow-md h-full w-full"
         />
-        <div className="absolute left-4 flex flex-col justify-center items-center md:left-[7.5%]">
-          <h1 className=" text-5xl text-primary text-left font-bold w-60 mb-8 md:w-md md:text-6xl">
+        <div className="absolute left-4 flex flex-col justify-center items-center lg:left-[7.5%]">
+          <h1 className=" text-4xl text-primary text-left font-bold w-50 mb-8 sm:text-5xl sm:w-xs md:text-6xl">
             About our agency
           </h1>
         </div>
       </div>
-      <div className="layout mx-auto my-24 space-y-18">
-        <div className="w-full max-w-lg mx-auto about-content flex flex-col justify-center gap-8 md:min-w-full md:flex-row">
-          <div className="about-img h-full w-full md:h-auto md:w-[40%] md:min-h-160">
+      <div className="layout mx-auto my-12 space-y-18 md:my-18">
+        <div className="w-full mx-auto about-content flex flex-col justify-center gap-8 md:min-w-full md:flex-row">
+          <div className="about-img h-full w-full md:h-auto md:w-[45%] md:min-h-160">
             <img
               src="/assets/images/about-us.webp"
               alt=""
-              className="shadow-md h-full w-full mx-auto"
+              className="shadow-md max-h-120 w-full mx-auto md:min-h-full"
             />
           </div>
-          <div className="space-y-8 md:w-[60%] md:mt-8">
+          <div className="space-y-8 md:w-[55%] md:mt-8">
             <div className="about-profile ">
               <h5 className="text-2xl font-bold opacity-60">About Us</h5>
               <p className="text-lg font-normal tracking-wide leading-8 my-6 opacity-80">

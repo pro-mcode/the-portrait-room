@@ -14,21 +14,8 @@
 .hero {
   position: relative;
   color: v.$primary-color;
-
-  //   &-img {
-  //     position: absolute;
-  //     left: 0;
-  //     right: 0;
-  //     top: 0;
-  //     bottom: 0;
-  //   }
-
-  // &-content {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 10%;
-  // }
 }
+
 .section-title {
   max-width: 40%;
   margin: 0 auto;
@@ -41,7 +28,6 @@
 .showcase-items {
   display: grid;
   grid-gap: v.$gap-3;
-  margin: v.$space-2 0;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 300px);
 }
@@ -84,7 +70,6 @@
 .gallery-items {
   display: grid;
   grid-gap: v.$gap-3;
-  margin: v.$space-2 0;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 300px);
 }
@@ -146,29 +131,5 @@
   font-family: "Playfair", serif;
   font-style: italic;
 }
-// .hamburger {
-//   position: relative;
-//   width: 24px;
-//   height: 24px;
-
-//   &-top,
-//   &-middle,
-//   &-bottom {
-//     position: absolute;
-//     width: 24px;
-//     height: 2px;
-//     background: #fff;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 9;
-//   }
-//   &-middle {
-//     transform: translateY(7px);
-//   }
-//   &-bottom {
-//     transform: translateY(14px);
-//   }
-// }
 @import "./breakpoints/tablet.scss";
 @import "./breakpoints/mobile.scss";

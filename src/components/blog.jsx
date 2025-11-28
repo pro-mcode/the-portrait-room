@@ -36,12 +36,12 @@ export default function Blog() {
         </p>
 
         {/* BLOG LIST — SHOW ONLY 3 */}
-        <div className="blog-grid flex flex-col space-y-6 justify-center items-stretch gap-4 mt-8 md:flex-row md:space-y-0 md:max-w-5xl mx-auto">
+        <div className="blog-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 mx-auto max-w-100 sm:max-w-200 lg:max-w-260">
           {currentBlogs.map((blog, index) => (
             <div
               onClick={() => navigate(`/blog/${blog.slug}`)}
               key={index}
-              className="blog-card w-full max-w-92 md:w-1/3 mx-auto cursor-pointer"
+              className="blog-card w-full mx-auto cursor-pointer"
             >
               <img
                 src={blog.img}

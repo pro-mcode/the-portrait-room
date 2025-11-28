@@ -5,6 +5,7 @@ import BlogContent from "../components/blog-content";
 import { useParams } from "react-router";
 import { blogCard } from "../components/blog-card";
 import Navbar from "../components/navbar";
+import Header from "../components/header";
 
 export default function BlogPage() {
   const { slug } = useParams();
@@ -14,9 +15,7 @@ export default function BlogPage() {
   return (
     <div>
       <title>Portrait Room</title>
-      <div className="py-6 text-primary absolute w-full mx-auto z-10">
-        <Navbar />
-      </div>
+      <Header />
       <BlogContent blog={blog} />
       <Blog blog={blog} />
       <Newsletter />

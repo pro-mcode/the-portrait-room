@@ -1,57 +1,3 @@
-// import { useState } from "react";
-// import { navLists } from "./navlists";
-
-// export default function Navbar() {
-//   const [navToggle, setNavToggle] = useState(false);
-//   const handleClick = () => {
-//     setNavToggle(true);
-//   };
-//   return (
-//     <nav className="navbar layout absolute top-4 z-20 w-full flex justify-between items-center">
-//       <div className="logo text-2xl font-medium">
-//         <a href="index.html">The Portrait Room</a>
-//       </div>
-//       <div className="links hidden md:block">
-//         <ul className="nav-links flex justify-between">
-//           {navLists.map((list, index) => (
-//             <li key={index}>
-//               <a
-//                 href="index.html"
-//                 className="active text-lg font-medium text-primary hover:opacity-70  capitalize md:ml-6 transition duration-300"
-//               >
-//                 {list}
-//               </a>
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-
-//       {navToggle && (
-//         <div
-//           onClick={handleClick}
-//           className={`hamburger md:hidden z-20 ${
-//             !navToggle ? " " : "rotate-90"
-//           }`}
-//         >
-//           <div
-//             className={`hamburger-top ${
-//               !navToggle ? " " : "rotate-45 translate-y-1.5 translate-x-1.5"
-//             }`}
-//           ></div>
-//           <div
-//             className={`hamburger-middle ${!navToggle ? " " : "hidden"}`}
-//           ></div>
-//           <div
-//             className={`hamburger-bottom ${
-//               !navToggle ? " " : "-rotate-45 translate-y-1.5 -translate-x-1.5"
-//             }`}
-//           ></div>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// }
-
 import { useState } from "react";
 import { navLists } from "./navlists";
 import { useNavigate } from "react-router";
@@ -65,25 +11,30 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar layout mx-auto">
+    <nav className="navbar layout mx-auto max-w-[95%] md:max-w-[90%]">
       <div className="flex justify-between items-center mx-auto">
-        <div className="logo text-2xl font-medium z-20">
+        {/* Logo */}
+        <div className="logo text-2xl font-medium z-30">
           <button onClick={() => navigate("/")}>Portrait Room</button>
         </div>
 
+        {/* Desktop Menu */}
         <div className="links hidden md:block">
           <ul className="nav-links flex justify-between">
             {navLists.map((list, index) => {
               const lowerList = list.toLowerCase();
 
               const handleClick = () => {
-                if (lowerList === "service" || lowerList === "blog") {
-                  // Scroll to section
+                const isValidSection = ["services", "pricing", "blog"].includes(
+                  lowerList
+                );
+
+                if (isValidSection) {
                   const section = document.getElementById(lowerList);
-                  section?.scrollIntoView({ behavior: "smooth" });
-                } else if (lowerList === "home") {
-                  // Navigate to home
-                  navigate("/");
+                  section?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start", // ⬅ scroll to top
+                  });
                 } else {
                   // Navigate to another route
                   navigate(`/${lowerList}`);
@@ -94,7 +45,7 @@ export default function Navbar() {
                 <li key={index}>
                   <button
                     onClick={handleClick}
-                    className="active text-lg font-medium hover:opacity-70 capitalize md:ml-6 transition duration-300"
+                    className="active text-lg font-medium hover:opacity-70 capitalize md:ml-10 transition duration-300"
                   >
                     {list}
                   </button>
@@ -133,33 +84,25 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute  -top-10 left-0 w-full bg-black/95 md:hidden shadow-lg overflow-hidden transition-all duration-300 ${
-            navToggle ? " pt-28 pb-18" : "max-h-0 py-0"
+          className={`absolute  -top-10 left-0 h-screen w-full bg-gray-800/80 md:hidden shadow-lg overflow-hidden transition-all duration-300 ${
+            navToggle ? " pt-32" : "max-h-0 py-0"
           }`}
         >
           <ul className="flex flex-col items-left px-4 z-50">
-            {/* {navLists.map((list, index) => (
-              <li key={index} className="py-3">
-                <a
-                  href="index.html"
-                  className="text-lg font-medium  hover:opacity-70 capitalize transition duration-300"
-                  onClick={() => setNavToggle(false)} // close menu when link clicked
-                >
-                  {list}
-                </a>
-              </li>
-            ))} */}
             {navLists.map((list, index) => {
               const lowerList = list.toLowerCase();
 
               const handleClick = () => {
-                if (lowerList === "service" || lowerList === "blog") {
-                  // Scroll to section
+                const isValidSection = ["services", "pricing", "blog"].includes(
+                  lowerList
+                );
+
+                if (isValidSection) {
                   const section = document.getElementById(lowerList);
-                  section?.scrollIntoView({ behavior: "smooth" });
-                } else if (lowerList === "home") {
-                  // Navigate to home
-                  navigate("/");
+                  section?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start", // ⬅ scroll to top
+                  });
                 } else {
                   // Navigate to another route
                   navigate(`/${lowerList}`);
@@ -167,13 +110,13 @@ export default function Navbar() {
               };
 
               return (
-                <li key={index} className="py-3">
+                <li key={index} className="border-t border-primary/50 w-[95%]">
                   <button
                     onClick={() => {
-                      handleClick(); // your original click handler
+                      handleClick();
                       setNavToggle(false); // close the menu
                     }}
-                    className="text-lg font-medium  hover:opacity-70 capitalize transition duration-300"
+                    className="text-primary text-center text-[1rem] font-medium py-5 w-full  hover:opacity-50 uppercase transition duration-300"
                   >
                     {list}
                   </button>

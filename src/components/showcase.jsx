@@ -13,7 +13,7 @@ export default function Showcase() {
           Explore a curated selection of moments we’ve beautifully captured,
           each telling its own unique story.
         </p>
-        <div className="showcase-items">
+        <div className="showcase-items my-8">
           {showcaseImage.map((item, index) => (
             <div
               key={index}
@@ -29,9 +29,10 @@ export default function Showcase() {
         </div>
         <button
           onClick={() => navigate("/gallery")}
-          className="btn-regular mx-auto"
+          className="btn-regular mx-auto group"
         >
-          View gallery
+          <span>View Gallery</span>
+          <i className="fa-solid fa-arrow-right mt-0.5 group-hover:translate-x-1.5 transition-all duration-300"></i>
         </button>
       </div>
     </section>

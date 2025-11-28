@@ -12,6 +12,9 @@
   --color-main-700: hsl(248, 70%, 36%);
   --color-regular-500: hsl(28, 100%, 52%);
 }
+html {
+  scroll-behavior: smooth;
+}
 .hero-bg {
   width: 100vw;
   height: 40rem;
